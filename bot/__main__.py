@@ -62,7 +62,7 @@ def stats(update, context):
 
 def start(update, context):
     buttons = ButtonMaker()
-    buttons.buildbutton("CHANNLE", "https://t.me/bruce_3_33")
+    buttons.buildbutton("CHANNLE", "https://t.me/xmirr0rs")
     buttons.buildbutton("YESU", "https://youtu.be/LDU_Txk06tM")
     uname = f'<a href="tg://user?id={update.message.from_user.id}">{update.message.from_user.first_name}</a>'
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
