@@ -63,12 +63,12 @@ def stats(update, context):
 def start(update, context):
     buttons = ButtonMaker()
     buttons.buildbutton("CHANNLE", "https://t.me/xmirr0rs")
-    buttons.buildbutton("YESU", "https://youtu.be/LDU_Txk06tM")
+    buttons.buildbutton("OFF-TOPIC", "https://t.me/offtopicxmirrors")
     uname = f'<a href="tg://user?id={update.message.from_user.id}">{update.message.from_user.first_name}</a>'
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
         start_string = f'''Hey! {uname},\n
-This bot can mirror all your links to Google Drive! and also can Upload them on Telegram if you want.
+This is a Bot to Mirror & Leech Various Files.
 Type /{BotCommands.HelpCommand} to get a list of available commands
 '''
         sendMarkup(start_string, context.bot, update, reply_markup)
